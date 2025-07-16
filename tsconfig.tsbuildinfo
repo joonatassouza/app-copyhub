@@ -1,0 +1,1 @@
+{"root":["./src/options.tsx","./src/popup.tsx","./src/vite-env.d.ts","./src/background/index.ts","./src/components/clipboardlist.tsx","./src/components/snippeteditor.tsx","./src/content/index.ts","./vite.config.ts"],"version":"5.8.3"}

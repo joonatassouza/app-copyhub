@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles for React Quill Rich Text Editor */
+.ql-toolbar {
+  @apply rounded-t-lg border-gray-300;
+}
+.ql-container {
+  @apply rounded-b-lg border-gray-300;
+}
+.ql-editor {
+  min-height: 150px;
+  @apply text-base;
+}

@@ -1,12 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "CopyHub",
+  "name": "CopyHub - Clipboard & Snippets",
   "version": "1.0.0",
-  "description": "A modern browser extension built with Vite and React.",
-  "permissions": ["storage", "activeTab"],
+  "description": "A powerful clipboard manager and text expander.",
+  "permissions": ["storage", "clipboardRead", "clipboardWrite", "contextMenus", "activeTab", "scripting"],
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+    }
   },
+  "options_page": "options.html",
   "background": {
     "service_worker": "background.js",
     "type": "module"
@@ -14,12 +19,13 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "all_frames": true
     }
   ],
   "icons": {
-    "16": "logo16.png",
-    "48": "logo48.png",
-    "128": "logo128.png"
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
   }
 }
